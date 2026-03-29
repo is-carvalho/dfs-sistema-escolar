@@ -1,13 +1,80 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.light {
+  background-color: #f4f6f8;
+  color: #000;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+.dark {
+  background-color: #121212;
+  color: #fff;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+/* Contraste de containers principais */
+.light .container,
+.light .content,
+.light .card,
+.light .tabela,
+.light .formulario,
+.light .campo {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.dark .container,
+.dark .content,
+.dark .card,
+.dark .tabela,
+.dark .formulario,
+.dark .campo {
+  background-color: #23272f !important;
+  color: #fff !important;
+}
+
+/* Contraste de tabelas */
+.light table,
+.light th,
+.light td {
+  background: #fff !important;
+  color: #222 !important;
+}
+.dark table,
+.dark th,
+.dark td {
+  background: #23272f !important;
+  color: #fff !important;
+}
+
+/* Contraste de inputs */
+.light input,
+.light textarea,
+.light select {
+  background: #fff !important;
+  color: #000 !important;
+  border: 1px solid #ccc;
+}
+.dark input,
+.dark textarea,
+.dark select {
+  background: #181a20 !important;
+  color: #fff !important;
+  border: 1px solid #444;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }

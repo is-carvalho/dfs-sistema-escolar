@@ -1,18 +1,9 @@
-import { useState } from "react";
 import styles from "./Home.module.css";
-import {
-  FaSun,
-  FaMoon,
-  FaUserGraduate,
-  FaClipboardList,
-  FaBook,
-} from "react-icons/fa";
+import { FaUserGraduate, FaClipboardList, FaBook } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AiFillDashboard } from "react-icons/ai";
 
-function Home() {
-  const [darkMode, setDarkMode] = useState(false);
-
+function Home({ darkMode }) {
   const alunosPorSerie = [
     { serie: "1º ano", total: 12 },
     { serie: "2º ano", total: 8 },
@@ -20,19 +11,10 @@ function Home() {
   ];
 
   return (
-    <div
-      className={`${styles.container} ${darkMode ? styles.dark : styles.light}`}
-    >
+    <div className={styles.container}>
       <header className={styles.header}>
         <h1>Home</h1>
         <p>Bem vindos à Escola React.js</p>
-
-        <button
-          className={styles.themeBtn}
-          onClick={() => setDarkMode(!darkMode)}
-        >
-          {darkMode ? <FaSun /> : <FaMoon />}
-        </button>
       </header>
 
       <section className={styles.cards}>
@@ -51,13 +33,13 @@ function Home() {
         <div className={styles.card}>
           <FaBook className={styles.icon} />
           <h3>Biblioteca</h3>
-          <p>Encontre os livros em nosso acervo</p>
+          <p>Lvros em nosso acervo</p>
           <Link to="/biblioteca">Acessar</Link>
         </div>
         <div className={styles.card}>
           <FaBook className={styles.icon} />
           <h3>Cadastrar Livro</h3>
-          <p>Adicione novos livros ao acervo</p>
+          <p>Adicione livros ao acervo</p>
           <Link to="/cadastrarLivro">Acessar</Link>
         </div>
         <div className={styles.card}>
