@@ -2,12 +2,11 @@ import { useEffect, useState } from "react";
 import styles from './Alunos.module.css'
 
 function Alunos(){    
-
     const [alunos, setAlunos] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [busca, setBusca] = useState("");
 
     useEffect( ()=> {
-
         const dados = [
             {id: 1, nome: 'Maria Silva', curso: 'Informática'},
             {id: 2, nome: 'João Souza', curso: 'Informática'},
@@ -16,24 +15,37 @@ function Alunos(){
             {id: 5, nome: 'Fernanda Santos', curso: 'Informática'},
             {id: 6, nome: 'Gabriel Henrique', curso: 'Informática'},
         ]
-
         setTimeout(() =>{
             setAlunos(dados);
             setLoading(false);
         }, 2000);
-
     }, []);
 
     if(loading){
         return <p className={styles.loading}>Carregando alunos...</p>
     }
 
+    // Filtra os alunos pelo nome
+    const alunosFiltrados = alunos.filter(aluno =>
+        aluno.nome.toLowerCase().includes(busca.toLowerCase())
+    );
+
     return(
         <div className={styles.container}>
             <h1>Lista de Alunos</h1>
 
-            {alunos.length === 0 ? (<p className={styles.vazio}>Nenhum aluno encontrado.</p>) 
-            : (
+            <input
+                type="text"
+                placeholder="Buscar por nome..."
+                value={busca}
+                onChange={e => setBusca(e.target.value)}
+                className={styles.buscaInput}
+                style={{marginBottom: '16px', padding: '8px', width: '100%', maxWidth: '350px'}}
+            />
+
+            {alunosFiltrados.length === 0 ? (
+                <p className={styles.vazio}>Nenhum aluno encontrado.</p>
+            ) : (
                 <table className={styles.tabela}>
                     <thead>
                         <tr>
@@ -43,7 +55,7 @@ function Alunos(){
                         </tr>
                     </thead>
                     <tbody>
-                        {alunos.map(aluno => (
+                        {alunosFiltrados.map(aluno => (
                             <tr key={aluno.id}>
                                 <td>{aluno.id}</td>
                                 <td>{aluno.nome}</td>
@@ -53,7 +65,6 @@ function Alunos(){
                     </tbody>
                 </table>
             )}
-
         </div>
     );
 }
