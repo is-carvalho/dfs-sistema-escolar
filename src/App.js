@@ -14,10 +14,10 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
   return (
     <div className={darkMode ? "dark" : "light"}>
-      <BrowserRouter>
+      <BrowserRouter basename={"/dfs-sistema-escolar"}>
         <Header darkMode={darkMode} setDarkMode={setDarkMode} />
         <main>
-          <Routes basename={"/dfs-sistema-escolar"}>
+          <Routes>
             <Route
               path="/dfs-sistema-escolar"
               element={<Home darkMode={darkMode} />}
