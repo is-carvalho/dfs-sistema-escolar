@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/dfs-sistema-escolar/static/css/main.e77d24bc.css",
-    "main.js": "/dfs-sistema-escolar/static/js/main.4d8d5a98.js",
+    "main.js": "/dfs-sistema-escolar/static/js/main.849535d8.js",
     "index.html": "/dfs-sistema-escolar/index.html",
     "main.e77d24bc.css.map": "/dfs-sistema-escolar/static/css/main.e77d24bc.css.map",
-    "main.4d8d5a98.js.map": "/dfs-sistema-escolar/static/js/main.4d8d5a98.js.map"
+    "main.849535d8.js.map": "/dfs-sistema-escolar/static/js/main.849535d8.js.map"
   },
   "entrypoints": [
     "static/css/main.e77d24bc.css",
-    "static/js/main.4d8d5a98.js"
+    "static/js/main.849535d8.js"
   ]
 }
