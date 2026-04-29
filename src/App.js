@@ -17,8 +17,11 @@ function App() {
       <BrowserRouter>
         <Header darkMode={darkMode} setDarkMode={setDarkMode} />
         <main>
-          <Routes>
-            <Route path="/" element={<Home darkMode={darkMode} />} />
+          <Routes basename={"/dfs-sistema-escolar"}>
+            <Route
+              path="/dfs-sistema-escolar"
+              element={<Home darkMode={darkMode} />}
+            />
             <Route path="/cadastarAlunos" element={<CadastrarAlunos />} />
             <Route path="/cadastrarLivro" element={<CadastrarLivro />} />
             <Route path="/Alunos" element={<Alunos />} />
