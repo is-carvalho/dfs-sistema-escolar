@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dfs-sistema-escolar/static/css/main.e77d24bc.css",
+    "main.js": "/dfs-sistema-escolar/static/js/main.950f43f4.js",
+    "index.html": "/dfs-sistema-escolar/index.html",
+    "main.e77d24bc.css.map": "/dfs-sistema-escolar/static/css/main.e77d24bc.css.map",
+    "main.950f43f4.js.map": "/dfs-sistema-escolar/static/js/main.950f43f4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e77d24bc.css",
+    "static/js/main.950f43f4.js"
+  ]
+}
